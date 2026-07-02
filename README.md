@@ -6,7 +6,7 @@ The website is maintained by club members and faculty as a collaborative learnin
 
 ## Live Website
 
-Add the GitHub Pages URL here.*](https://monroecc-ictclub.github.io/website/
+https://monroecc-ictclub.github.io/website/
 
 ## Contributing
 
