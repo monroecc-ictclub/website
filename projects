@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<!--
+===========================================================
+FILE:       projects.html
+ 
+DESCRIPTION:
+    Provides information about student projects,
+    collaborative activities, and technical work
+    completed by members of the Information &
+    Computer Technology Club.
+      
+AUTHOR:
+    Monroe Community College
+    Information & Computer Technology Club
+===========================================================
+-->
+ 
+<html lang="en">
+ 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
+
+        <title>Projects - ICT Club</title>
+
+        <link rel="stylesheet"
+              href="styles.css">
+
+    </head>
+
+  <body>
+      <header>
+          <nav>
+              <div class="logo">
+                  ICT Club
+              </div>
+              <ul class="nav-links">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="projects.html">Projects</a></li>
+                  <li><a href="events.html">Events</a></li>
+                  <li><a href="resources.html">Resources</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+              </ul>
+          </nav>
+          <div class="hero">
+              <h1>Projects</h1>
+              <p class="subtitle">
+                  Learning by Building
+              </p>
+          </div>
+      </header>
+
+      <main>
+          <!--
+              ==================================================
+              Main Content
+              ==================================================
+          -->
+          <section>
+              <h2>Student Projects</h2>
+              <p>
+                  One of the best ways to learn technology is by
+                  building real-world projects. The Information & 
+                  Computer Technology Club encourages students to 
+                  collaborate on software, hardware, networking, 
+                  cybersecurity, Linux, and web development 
+                  projects throughout the academic year. As 
+                  projects are completed, they will be showcased 
+                  here to inspire future members and highlight 
+                  the work of the club.
+              </p>
+          </section>
+          <section class="construction">
+            <h2>🚧 Under Construction 🚧</h2>
+            <p>
+                This page is currently being developed by
+                members of the ICT Club.
+            </p>
+            <p>
+                Check back soon as we begin showcasing
+                student projects and technical work.
+            </p>
+          </section>
+      </main>
+      
+      <footer>
+          <p>
+              Monroe Community College
+          </p>
+          <p>
+              Information &amp; Computer Technology Club
+          </p>
+      </footer>
+  </body>
+</html>    
