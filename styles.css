@@ -1,8 +1,27 @@
-/*==================================================
+/*==========================================================
+FILE:       styles.css
+
+DESCRIPTION:
+    Cascading Style Sheet (CSS) for the Monroe Community
+    College Information & Computer Technology Club website.
+
+    This file defines the visual appearance of the website,
+    including layout, colors, typography, navigation,
+    buttons, cards, responsive design, and page formatting.
+
+NOTES:
+    - Keep related styles grouped together.
+    - Add new sections using the standard comment format.
+    - Update existing styles when possible rather than
+      creating duplicate rules.
+
+AUTHOR:
     Monroe Community College
     Information & Computer Technology Club
-    Version 2.0
-==================================================*/
+
+==========================================================*/
+
+
 /*==================================================
     General Styles
 ==================================================*/
@@ -41,13 +60,14 @@ h2 {
 header {
     background-color: #003B5C;
     color: white;
-    padding: 20px 40px 60px 40px;
+    padding: 15px 30px 50px 30px;
 }
 header h1,
 header h2,
 header p {
     color: white;
 }
+
 /*==================================================
     Navigation
 ==================================================*/
@@ -57,9 +77,25 @@ nav {
     align-items: center;
     margin-bottom: 60px;
 }
-.logo {
+
+.logo
+{
     font-size: 1.8rem;
     font-weight: bold;
+}
+.logo a
+{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: white;
+    text-decoration: none;
+}
+.logo img
+{
+    width: 48px;
+    height: 48px;
 }
 .nav-links {
     list-style: none;
@@ -75,6 +111,7 @@ nav {
 .nav-links a:hover {
     color: #F2A900;
 }
+
 /*==================================================
     Hero Section
 ==================================================*/
@@ -96,6 +133,7 @@ nav {
     font-size: 2rem;
     margin-bottom: 40px;
 }
+
 /*==================================================
     Buttons
 ==================================================*/
@@ -118,6 +156,7 @@ nav {
 .button:hover {
     background-color: white;
 }
+
 /*==================================================
     About Section
 ==================================================*/
@@ -132,6 +171,7 @@ nav {
     margin: auto;
     text-align: center;
 }
+
 /*==================================================
     Topic Cards
 ==================================================*/
@@ -164,6 +204,7 @@ nav {
     padding: 20px;
     font-size: .95rem;
 }
+
 /*==================================================
     Projects Section
 ==================================================*/
@@ -174,6 +215,7 @@ nav {
     box-shadow: 0 2px 8px rgba(0,0,0,.10);
     text-align: center;
 }
+
 /*==================================================
     Events Section
 ==================================================*/
@@ -184,6 +226,7 @@ nav {
     box-shadow: 0 2px 8px rgba(0,0,0,.10);
     text-align: center;
 }
+
 /*==================================================
     Footer
 ==================================================*/
@@ -196,6 +239,7 @@ footer {
 footer p {
     margin: 8px 0;
 }
+
 /*==================================================
     Responsive Layout
 ==================================================*/
