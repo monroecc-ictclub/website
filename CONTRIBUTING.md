@@ -60,3 +60,5 @@ This website serves two purposes:
 ## Questions
 
 If you have questions about contributing, please visit the Contact page on the club website. You can also reach out to one of the current club officers or the faculty advisor using the contact information provided there.
+
+
