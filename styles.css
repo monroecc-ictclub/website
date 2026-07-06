@@ -304,50 +304,78 @@ footer p {
 }
 
 
-/* ==================================================
-Events
-================================================== */
+/*==================================================
+    Events
+==================================================*/
+
 .event
 {
-  background: white;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, .10);
-  overflow: hidden;
+    background: white;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .10);
+    overflow: hidden;
 }
 
 .event summary
 {
-  padding: 15px 20px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  cursor: pointer;
-  background-color: #F4F6F8;
+    cursor: pointer;
+    list-style: none;
 }
 
-.event summary:hover
+.event-summary
 {
-  background-color: #E8EDF2;
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    column-gap: 20px;
+
+    padding: 15px 20px;
+
+    font-size: 1.1rem;
+    font-weight: bold;
+
+    background-color: #F4F6F8;
+}
+
+.event summary:hover .event-summary
+{
+    background-color: #E8EDF2;
+}
+
+.event-date
+{
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+.event-title
+{
+    font-weight: bold;
 }
 
 .event-content
 {
-  padding: 20px;
+    padding: 20px;
 }
 
 .event-content h3
 {
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
-.event-content ul
-{
-  margin-left: 25px;
-  margin-bottom: 20px;
+    margin-top: 24px;
+    margin-bottom: 10px;
 }
 
 .event-content p
 {
-  margin-bottom: 12px;
+    margin-bottom: 12px;
+}
+
+.event-content ul
+{
+    margin-left: 25px;
+    margin-bottom: 20px;
+}
+
+.event-content li
+{
+    margin-bottom: 6px;
 }
