@@ -320,7 +320,7 @@ footer p {
 .event summary
 {
     cursor: pointer;
-    list-style: none;
+   /*list-style: none; */ 
 }
 
 .event-summary
