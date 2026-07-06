@@ -320,13 +320,11 @@ footer p {
 .event summary
 {
     cursor: pointer;
-   /*list-style: none; */ 
 }
 
 .event-summary
 {
-    display: grid;
-    grid-template-columns: 220px 1fr;
+    grid-template-columns: 20px 1fr;
     column-gap: 25px;
     align-items: center;
     width: 100%;
@@ -350,6 +348,7 @@ footer p {
 .event-title
 {
     font-weight: bold;
+    padding-left: 50px;
     white-space: nowrap;    
 }
 
