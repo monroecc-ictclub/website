@@ -326,14 +326,13 @@ footer p {
 .event-summary
 {
     display: grid;
-    grid-template-columns: 180px 1fr;
-    column-gap: 20px;
-
+    grid-template-columns: 220px 1fr;
+    column-gap: 25px;
+    align-items: center;
+    width: 100%;
     padding: 15px 20px;
-
     font-size: 1.1rem;
     font-weight: bold;
-
     background-color: #F4F6F8;
 }
 
@@ -351,6 +350,7 @@ footer p {
 .event-title
 {
     font-weight: bold;
+    white-space: nowrap;    
 }
 
 .event-content
