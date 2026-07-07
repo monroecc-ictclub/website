@@ -41,7 +41,7 @@ body {
 
 /* Defines the formatting of page sections */
 main {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 40px 20px;
 }
@@ -81,7 +81,7 @@ h2 {
 header {
     background-color: #003B5C;
     color: white;
-    padding: 10px 30px 50px 30px;
+    padding: 10px 30px 10px 30px;
 }
 
 /* Defines the formatting of headings within the website header */
@@ -103,7 +103,7 @@ header p {
 .header-layout {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 10px;
 }
 
 /* Defines the logo container */
@@ -113,7 +113,7 @@ header p {
 
 /* Defines the logo image size */
 .logo img {
-    width: 200px;
+    width: 175px;
     height: auto;
 }
 
@@ -168,13 +168,13 @@ nav {
 /* Defines the formatting of level 1 headings within the hero section */
 .hero h1 {
     font-size: 2.8rem;
-    margin-bottom: 8px;
+    margin-bottom: 1px;
 }
 
 /* Defines the formatting of level 2 headings within the hero section */
 .hero h2 {
     color: #F2A900;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
 }
 
 
