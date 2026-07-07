@@ -31,6 +31,7 @@ AUTHOR:
     box-sizing: border-box;
 }
 
+/* Defines the formatting of the page body */
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #F4F6F8;
@@ -38,22 +39,34 @@ body {
     line-height: 1.6;
 }
 
+/* Defines the formatting of page sections */
 main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
 }
 
+/* Defines the formatting of section areas */
 section {
     margin-bottom: 60px;
 }
 
+/*==================================================
+    Header
+
+    Defines the website header displayed at
+    the top of each page.
+==================================================
+*/
+
+/* Defines the formatting of level 1, 2, and 3 headings */
 h1,
 h2,
 h3 {
     color: #003B5C;
 }
 
+/* Defines the formatting of level 2 headings */
 h2 {
     margin-bottom: 20px;
     font-size: 2rem;
@@ -63,12 +76,15 @@ h2 {
 /*==================================================
     Header
 ==================================================*/
+
+/* Defines the formatting of the website header */
 header {
     background-color: #003B5C;
     color: white;
     padding: 10px 30px 50px 30px;
 }
 
+/* Defines the formatting of headings within the website header */
 header h1,
 header h2,
 header p {
@@ -77,43 +93,57 @@ header p {
 
 /*==================================================
     Header Layout
+
+    Defines the layout of the logo,
+    navigation, and hero section within
+    the page header.
 ==================================================*/
 
+/* Defines the overall header layout */
 .header-layout {
     display: flex;
     align-items: center;
     gap: 40px;
 }
 
+/* Defines the logo container */
 .logo {
     flex: 0 0 auto;
 }
 
+/* Defines the logo image size */
 .logo img {
     width: 200px;
     height: auto;
 }
 
+/* Defines the header content area */
 .header-content {
     flex: 1;
 }
 
 /*==================================================
     Navigation
+
+    Defines the formatting of the website
+    navigation menu.
 ==================================================*/
 
+/* Defines the formatting of the navigation bar */
 nav {
     display: flex;
     justify-content: flex-end;
     margin-bottom: 20px;
 }
 
+/* Defines the formatting of the navigation link list */
 .nav-links {
     list-style: none;
     display: flex;
     gap: 30px;
 }
 
+/* Defines the formatting of navigation links */
 .nav-links a {
     color: white;
     text-decoration: none;
@@ -121,6 +151,7 @@ nav {
     transition: color 0.3s;
 }
 
+/* Defines the hover effect for navigation links */
 .nav-links a:hover {
     color: #F2A900;
 }
@@ -129,58 +160,30 @@ nav {
     Hero Section
 ==================================================*/
 
+/* Defines the formatting within the hero section */
 .hero {
     text-align: center;
 }
 
+/* Defines the formatting of level 1 headings within the hero section */
 .hero h1 {
     font-size: 2.8rem;
     margin-bottom: 8px;
 }
 
+/* Defines the formatting of level 2 headings within the hero section */
 .hero h2 {
     color: #F2A900;
     font-size: 1.8rem;
 }
 
-/*==================================================
-    Buttons
-==================================================*/
 
-.button {
-    display: inline-block;
-    background-color: #F2A900;
-    color: #003B5C;
-    padding: 12px 28px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.button:hover {
-    background-color: white;
-}
-
-/*==================================================
-    About Section
-==================================================*/
-#about {
-    background: white;
-    padding: 35px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, .10);
-}
-
-#about p {
-    max-width: 900px;
-    margin: auto;
-    text-align: center;
-}
 
 /*==================================================
     Information Cards
 ==================================================*/
+
+/* Defines the formatting of the card container */
 .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -188,6 +191,7 @@ nav {
     gap: 25px;
 }
 
+/* Defines the formatting of a standard information card */
 .card {
     flex: 1 1 320px;
     max-width: 320px;
@@ -195,11 +199,10 @@ nav {
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, .12);
     overflow: hidden;
-    transition: transform .25s,
-        box-shadow .25s;
+    transition: transform .25s, box-shadow .25s;
 }
 
-/* Wider version of the standard card */
+/* Defines the formatting of a wide information card */
 .card-wide {
     flex: 1 1 400px;
     max-width: 400px;
@@ -211,11 +214,14 @@ nav {
         box-shadow .25s;
 }
 
+
+/* Defines the hover effect for information cards */
 .card:hover {
     transform: translateY(-6px);
     box-shadow: 0 8px 18px rgba(0, 0, 0, .18);
 }
 
+/* Defines the formatting of level 3 headings within a card */
 .card h3 {
     background-color: #003B5C;
     color: white;
@@ -223,6 +229,7 @@ nav {
     text-align: center;
 }
 
+/* Defines the formatting of paragraphs within a card */
 .card p {
     padding: 20px;
     font-size: .95rem;
@@ -305,28 +312,35 @@ footer p {
 
 
 /*==================================================
-    Events
+    Accordion Components
 ==================================================*/
 
-.event
+/* Defines the overall accordion container  */
+.accordion
 {
     background: white;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, .10);
     overflow: hidden;
 }
 
-.event summary
+/* Indents nested accordions */
+.accordion .accordion
+{
+    margin-top: 15px;
+    margin-left: 40px;
+}
+
+/* Changes cursor to pointer on hover */
+.accordion summary
 {
     cursor: pointer;
 }
 
-.event-summary
+/* Defines formatting for accordion summary */
+.accordion-summary
 {
-    grid-template-columns: 20px 1fr;
-    column-gap: 25px;
-    align-items: center;
     width: 100%;
     padding: 15px 20px;
     font-size: 1.1rem;
@@ -334,17 +348,26 @@ footer p {
     background-color: #F4F6F8;
 }
 
-.event summary:hover .event-summary
+/* Defines formatting for accordion when hovering over summary */
+.accordion summary:hover
 {
-    background-color: #E8EDF2;
+    background-color: #87898a;
 }
 
+/* Defines formatting for accordion title */
+.accordion-title
+{
+    font-weight: bold;
+}
+
+/* Defines formatting for event date */
 .event-date
 {
     white-space: nowrap;
     font-weight: bold;
 }
 
+/* Defines formatting for event title */
 .event-title
 {
     font-weight: bold;
@@ -352,28 +375,33 @@ footer p {
     white-space: nowrap;    
 }
 
+/* Defines formatting for event content */
 .event-content
 {
     padding: 20px;
 }
 
+/* Defines formatting for level 3 headings */
 .event-content h3
 {
     margin-top: 24px;
     margin-bottom: 10px;
 }
 
+/* Defines formatting for paragraphs within event content  */
 .event-content p
 {
     margin-bottom: 12px;
 }
 
+/* Defines formatting for unordered lists within event content  */
 .event-content ul
 {
     margin-left: 25px;
     margin-bottom: 20px;
 }
 
+/* Defines formatting for list items within event content */
 .event-content li
 {
     margin-bottom: 6px;
