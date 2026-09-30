@@ -1,0 +1,42 @@
+[
+    {
+        "file": "ethernet-cables-intro.md",
+        "title": "An Introduction to Ethernet Cables"
+    },
+    {
+        "file": "build-vs-buy.md",
+        "title": "PC Building Guide: Build vs. Prebuilt vs. Laptop vs. Chromebook"
+    },
+    {
+        "file": "processors.md",
+        "title": "PC Building Guide: Processors (CPUs)"
+    },
+    {
+        "file": "motherboards.md",
+        "title": "PC Building Guide: Motherboards"
+    },
+    {
+        "file": "ram.md",
+        "title": "PC Building Guide: Memory (RAM)"
+    },
+    {
+        "file": "graphics-cards.md",
+        "title": "PC Building Guide: Graphics Cards (GPUs)"
+    },
+    {
+        "file": "storage.md",
+        "title": "PC Building Guide: Storage (SSDs & Hard Drives)"
+    },
+    {
+        "file": "operating-systems.md",
+        "title": "PC Building Guide: Operating Systems"
+    },
+    {
+        "file": "monitors.md",
+        "title": "PC Building Guide: Monitors"
+    },
+    {
+        "file": "peripherals.md",
+        "title": "PC Building Guide: Peripherals (Keyboards, Mice, Headsets & More)"
+    }
+]

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<!--
+===========================================================
+FILE:       markdown-viewer.html
+
+DESCRIPTION:
+    Markdown viewer page for the Monroe Community
+    College Information & Computer Technology Club website.
+    Lets visitors pick a markdown (.md) file from the
+    markdown/ folder and displays it as formatted HTML.
+
+INSTRUCTIONS:
+    To add a new markdown file:
+        1. Place the .md file in the markdown/ folder.
+        2. Add an entry for it in markdown/files.json:
+               { "file": "my-file.md", "title": "My Title" }
+        3. Commit both files to GitHub.
+
+    A file can be linked to directly with:
+        markdown-viewer.html?file=my-file.md
+
+    NOTE: Browsers block loading files from a page opened
+    directly from disk (file://). To test locally, run a
+    local web server from the website folder, e.g.:
+        python -m http.server
+    then open http://localhost:8000/markdown-viewer.html
+
+AUTHOR:
+    Monroe Community College
+    Information & Computer Technology Club
+===========================================================
+-->
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
+
+        <title>Markdown Viewer - ICT Club</title>
+
+        <link rel="stylesheet"
+              href="styles.css">
+
+        <!--
+            marked converts markdown to HTML.
+            DOMPurify removes any unsafe HTML from the result.
+        -->
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js"></script>
+
+    </head>
+
+  <body>
+      <header>
+          <nav>
+              <div class="logo">
+                  ICT Club
+              </div>
+              <ul class="nav-links">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="projects.html">Projects</a></li>
+                  <li><a href="events.html">Events</a></li>
+                  <li><a href="resources.html">Resources</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+              </ul>
+          </nav>
+
+       <!--==================================================
+           Hero Section
+       ==================================================-->
+       <div class="hero">
+              <h1>Markdown Viewer</h1>
+              <p class="subtitle">
+                  Club notes and documents
+              </p>
+          </div>
+      </header>
+
+      <!--==================================================
+      Main Content
+      ==================================================-->
+      <main>
+          <!--
+              ==================================================
+              File Picker
+              ==================================================
+          -->
+          <section class="section-box markdown-picker">
+              <label for="markdown-select">Choose a document:</label>
+              <select id="markdown-select">
+                  <option value="">Loading file list...</option>
+              </select>
+          </section>
+
+          <!--
+              ==================================================
+              Rendered Markdown
+              ==================================================
+          -->
+          <section class="section-box markdown-body" id="markdown-output">
+              <p>Select a document above to view it.</p>
+          </section>
+      </main>
+
+  <!--==================================================
+      Footer
+  ==================================================-->
+   <footer>
+          <p>
+              Monroe Community College
+          </p>
+          <p>
+              Information &amp; Computer Technology Club
+          </p>
+      </footer>
+
+  <!--==================================================
+      Markdown Viewer Script
+  ==================================================-->
+  <script>
+      const MARKDOWN_FOLDER = "markdown/";
+      const select = document.getElementById("markdown-select");
+      const output = document.getElementById("markdown-output");
+
+      // Shows a plain text message in the output area
+      function showMessage(text) {
+          output.innerHTML = "";
+          const p = document.createElement("p");
+          p.textContent = text;
+          output.appendChild(p);
+      }
+
+      // Loads a markdown file and displays it as HTML
+      async function loadMarkdown(file) {
+          if (!file) {
+              showMessage("Select a document above to view it.");
+              return;
+          }
+
+          showMessage("Loading...");
+
+          try {
+              const response = await fetch(MARKDOWN_FOLDER + encodeURIComponent(file),
+                                           { cache: "no-cache" });
+              if (!response.ok) {
+                  throw new Error(response.status + " " + response.statusText);
+              }
+              const text = await response.text();
+              output.innerHTML = DOMPurify.sanitize(marked.parse(text));
+          } catch (error) {
+              showMessage("Could not load " + file + " (" + error.message + ").");
+          }
+
+          // Keep the chosen file in the address bar so the page can be linked to
+          const url = new URL(window.location);
+          url.searchParams.set("file", file);
+          history.replaceState(null, "", url);
+      }
+
+      // Loads the list of files from markdown/files.json into the dropdown
+      async function loadFileList() {
+          try {
+              // "no-cache" makes the browser check for changes instead of
+              // reusing an old copy, so newly added files show up
+              const response = await fetch(MARKDOWN_FOLDER + "files.json",
+                                           { cache: "no-cache" });
+              if (!response.ok) {
+                  throw new Error(response.status + " " + response.statusText);
+              }
+              const files = await response.json();
+
+              select.innerHTML = '<option value="">-- Select a document --</option>';
+              for (const entry of files) {
+                  const option = document.createElement("option");
+                  option.value = entry.file;
+                  option.textContent = entry.title || entry.file;
+                  select.appendChild(option);
+              }
+
+              // Open the file named in the URL (?file=...), if there is one
+              const requested = new URLSearchParams(window.location.search).get("file");
+              if (requested && files.some(entry => entry.file === requested)) {
+                  select.value = requested;
+                  loadMarkdown(requested);
+              }
+          } catch (error) {
+              select.innerHTML = '<option value="">File list unavailable</option>';
+              showMessage("Could not load the file list (" + error.message + "). "
+                  + "If you opened this page directly from disk, run a local web server instead.");
+          }
+      }
+
+      select.addEventListener("change", () => loadMarkdown(select.value));
+      loadFileList();
+  </script>
+  </body>
+</html>
