@@ -406,3 +406,143 @@ footer p {
 {
     margin-bottom: 6px;
 }
+
+
+/*==================================================
+    Markdown Viewer
+==================================================*/
+
+/* Defines the formatting of the file picker bar */
+.markdown-picker {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Defines the formatting of the file picker label */
+.markdown-picker label {
+    font-weight: bold;
+    color: #003B5C;
+}
+
+/* Defines the formatting of the file picker dropdown */
+.markdown-picker select {
+    flex: 1 1 250px;
+    max-width: 500px;
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: 2px solid #003B5C;
+    border-radius: 6px;
+    background-color: white;
+    cursor: pointer;
+}
+
+/* Defines the focus effect for the file picker dropdown */
+.markdown-picker select:focus {
+    outline: none;
+    border-color: #F2A900;
+}
+
+/* Defines the formatting of the rendered markdown area */
+.markdown-body {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Defines the formatting of headings within rendered markdown */
+.markdown-body h1 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #F2A900;
+}
+
+.markdown-body h2 {
+    font-size: 1.6rem;
+    text-align: left;
+    margin-top: 30px;
+    margin-bottom: 12px;
+}
+
+.markdown-body h3 {
+    margin-top: 24px;
+    margin-bottom: 10px;
+}
+
+/* Defines the formatting of paragraphs and lists within rendered markdown */
+.markdown-body p {
+    margin-bottom: 14px;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+    margin-left: 25px;
+    margin-bottom: 14px;
+}
+
+.markdown-body li {
+    margin-bottom: 6px;
+}
+
+/* Defines the formatting of links within rendered markdown */
+.markdown-body a {
+    color: #003B5C;
+}
+
+.markdown-body a:hover {
+    color: #F2A900;
+}
+
+/* Defines the formatting of code within rendered markdown */
+.markdown-body code {
+    font-family: Consolas, "Courier New", monospace;
+    background-color: #F4F6F8;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+.markdown-body pre {
+    background-color: #F4F6F8;
+    padding: 15px;
+    border-radius: 6px;
+    overflow-x: auto;
+    margin-bottom: 14px;
+}
+
+.markdown-body pre code {
+    padding: 0;
+}
+
+/* Defines the formatting of block quotes within rendered markdown */
+.markdown-body blockquote {
+    border-left: 4px solid #F2A900;
+    padding-left: 15px;
+    margin-bottom: 14px;
+    color: #555555;
+}
+
+/* Defines the formatting of tables within rendered markdown */
+.markdown-body table {
+    border-collapse: collapse;
+    margin-bottom: 14px;
+    display: block;
+    overflow-x: auto;
+}
+
+.markdown-body th,
+.markdown-body td {
+    border: 1px solid #CCCCCC;
+    padding: 8px 12px;
+}
+
+.markdown-body th {
+    background-color: #003B5C;
+    color: white;
+}
+
+/* Defines the formatting of images within rendered markdown */
+.markdown-body img {
+    max-width: 100%;
+}
