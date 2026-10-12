@@ -406,6 +406,14 @@ footer p {
 {
     margin-bottom: 6px;
 }
+.event-content img
+{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 12px;
+    border-radius: 6px;
+}
 
 
 /*==================================================

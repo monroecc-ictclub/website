@@ -4,6 +4,10 @@
         "title": "An Introduction to Ethernet Cables"
     },
     {
+        "file": "operating-systems-event.md",
+        "title": "Operating Systems Workshop"
+    },
+    {
         "file": "build-vs-buy.md",
         "title": "PC Building Guide: Build vs. Prebuilt vs. Laptop vs. Chromebook"
     },
