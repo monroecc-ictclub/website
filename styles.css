@@ -409,7 +409,8 @@ footer p {
 .event-content img
 {
     display: block;
-    max-width: 100%;
+    width: 100%;
+    max-width: 400px;
     height: auto;
     margin: 0 auto 12px;
     border-radius: 6px;
