@@ -67,7 +67,6 @@ JSON is strict. A single mistake stops the **whole** list from loading, and the 
 - **Mismatched file name.** The `file` value must match the real file name exactly, including capital letters and the `.md` extension.
 - **Comments.** JSON doesn't allow comments, so don't add `//` or `/* */` notes to `files.json`.
 
-To check the file, paste its contents into a JSON validator such as [jsonlint.com](https://jsonlint.com), or open it in VS Code, which underlines errors in red.
 
 ## Step 3: Test It Locally
 
@@ -81,17 +80,8 @@ python -m http.server
 
 Then open <http://localhost:8000/markdown-viewer.html> in your browser and choose your document from the dropdown. Press **Ctrl+C** in the terminal to stop the server when you're done.
 
-## Step 4: Commit Your Changes
-
-Commit **both** files to GitHub:
-
-- the new `.md` file in `markdown/`
-- the updated `markdown/files.json`
-
-Use a descriptive commit message, such as `Add network basics document to markdown viewer`.
 
 ## Extra Tips
 
 - **Linking directly to a document:** add `?file=` and the file name to the viewer's address, for example `markdown-viewer.html?file=network-basics.md`.
 - **Images and links inside a document:** paths are read from the `website` folder, not from `markdown/`. If an image is saved at `markdown/images/diagram.png`, refer to it as `markdown/images/diagram.png` in your markdown.
-- **Supported formatting:** headings, bold and italic text, lists, links, images, tables, block quotes, and code blocks all display correctly. For HTML safety, the viewer removes scripts and other unsafe HTML.
