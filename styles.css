@@ -555,3 +555,115 @@ footer p {
 .markdown-body img {
     max-width: 100%;
 }
+
+
+/*==================================================
+    Featured Stories
+==================================================*/
+
+/* Defines the formatting of featured story cards */
+.story-card {
+    flex: 1 1 320px;
+    max-width: 420px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .12);
+    overflow: hidden;
+}
+
+.story-image {
+    max-width: 650px;
+    margin: 25px auto;
+    text-align: center;
+}
+
+/* Defines the formatting of article images */
+.story-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+/* Defines the formatting of image captions */
+.story-image figcaption {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: #666666;
+    font-style: italic;
+}
+
+/* Defines the formatting of story titles */
+.story-card h3 {
+    padding: 15px 20px 5px;
+}
+
+/* Defines the formatting of story descriptions */
+.story-card p {
+    padding: 10px 20px;
+    font-size: .95rem;
+}
+
+/* Defines the formatting of story links */
+.story-card a {
+    display: inline-block;
+    margin: 0 20px 20px;
+    color: #003B5C;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.story-card a:hover {
+    color: #F2A900;
+    text-decoration: underline;
+}
+
+.featured-story-card {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 25px 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .12);
+}
+
+/* Defines the formatting of the story title */
+.featured-story-card h3 {
+    background-color: #003B5C;
+    color: white;
+    padding: 15px;
+    margin: -25px -30px 20px;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+}
+
+/* Defines the formatting of story paragraphs */
+.featured-story-card p {
+    margin-bottom: 15px;
+}
+
+/* Defines the formatting of the story link */
+.featured-story-card a {
+    color: #003B5C;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.featured-story-card a:hover {
+    color: #F2A900;
+    text-decoration: underline;
+}
+
+/*==================================================
+    Article Content
+==================================================*/
+
+.article-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.article-content p {
+    margin-bottom: 18px;
+    line-height: 1.7;
+}
