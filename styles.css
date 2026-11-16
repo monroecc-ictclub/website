@@ -406,6 +406,14 @@ footer p {
 {
     margin-bottom: 6px;
 }
+
+/* Defines formatting for important notices within event content */
+.event-content .event-notice
+{
+    font-size: 1.3em;
+    font-weight: 900;
+    text-decoration: underline;
+}
 .event-content img
 {
     display: block;
